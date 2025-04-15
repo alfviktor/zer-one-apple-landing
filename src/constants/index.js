@@ -23,23 +23,23 @@ import {
     },
     {
       id: 2,
-      textLists: ["Titanium.", "So strong. So light. So Pro."],
+      textLists: ["Machines should serve humans", "Thinking partners. Creative work. Busywork automated."],
       video: highlightSecondVideo,
       videoDuration: 5,
     },
     {
       id: 3,
       textLists: [
-        "iPhone 15 Pro Max has the",
-        "longest optical zoom in",
-        "iPhone ever. Far out.",
+        "Zero One has minds of genius and design of artistry.",
+        "Working on your behalf.",
+        "Far beynd mediocrity.",
       ],
       video: highlightThirdVideo,
       videoDuration: 5,
     },
     {
       id: 4,
-      textLists: ["All-new Action button.", "What will yours do?."],
+      textLists: ["At the intersection of technology and human potential, something magical happens.","40% more time on creative, high-value work."],
       video: highlightFourthVideo,
       videoDuration: 5,
     },
