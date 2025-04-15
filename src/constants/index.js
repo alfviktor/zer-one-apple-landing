@@ -15,12 +15,11 @@ import {
     {
       id: 1,
       textLists: [
-        "Enter A17 Pro.",
-        "Game‑changing chip.",
-        "Groundbreaking performance.",
+        "Brilliant minds spend their days doing work a machine could do.",
+        "Liberation from the soul-crushing work",
       ],
       video: highlightFirstVideo,
-      videoDuration: 4,
+      videoDuration: 5,
     },
     {
       id: 2,
@@ -36,13 +35,13 @@ import {
         "iPhone ever. Far out.",
       ],
       video: highlightThirdVideo,
-      videoDuration: 2,
+      videoDuration: 5,
     },
     {
       id: 4,
       textLists: ["All-new Action button.", "What will yours do?."],
       video: highlightFourthVideo,
-      videoDuration: 3.63,
+      videoDuration: 5,
     },
   ];
   

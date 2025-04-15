@@ -40,8 +40,8 @@ const Features = () => {
         
         <div className="flex flex-col justify-center items-center overflow-hidden">
           <div className="mt-32 mb-24 pl-24">
-            <h2 className="text-5xl lg:text-7xl font-semibold">iPhone.</h2>
-            <h2 className="text-5xl lg:text-7xl font-semibold">Forged in titanium.</h2>
+            <h2 className="text-5xl lg:text-7xl font-semibold">Alma</h2>
+            <h2 className="text-5xl lg:text-7xl font-semibold">Teaching made wonderfully simple.</h2>
           </div>
 
           <div className="flex-center flex-col sm:px-10">
@@ -64,21 +64,21 @@ const Features = () => {
               <div className="feature-text-container">
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
-                    iPhone 15 Pro is {' '}
+                    Alma is {' '}
                     <span className="text-white">
-                      the first iPhone to feature an aerospace-grade titanium design
+                      the first native AI assistant for teachers
                     </span>,
-                    using the same alloy that spacecrafts use for missions to Mars.
+                    built on green AI servers with prolific accuracy and speed.
                   </p>
                 </div>
 
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
-                    Titanium has one of the best strength-to-weight ratios of any metal, making these our {' '}
+                    Alma has one of the best strength-to-weight ratios of any AI assistant, making this {' '}
                     <span className="text-white">
-                      lightest Pro models ever.
-                    </span>
-                    You'll notice the difference the moment you pick one up.
+                      one of the fastest AI assistants ever
+                    </span>.
+                    You'll notice the difference the moment you try Alma.
                   </p>
                 </div>
 
