@@ -13,9 +13,11 @@
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.105.5",
     "@sentry/react": "^7.112.2",
+    "@vercel/blob": "^1.0.0",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^7.5.0",
     "three": "^0.164.1"
   },
   "devDependencies": {
