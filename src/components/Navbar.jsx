@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { appleImg, bagImg, searchImg } from '../utils';
 import { navLists } from '../constants';
 import { useGSAP } from '@gsap/react';
@@ -6,18 +6,30 @@ import gsap from 'gsap';
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false); // State to manage navbar visibility
-
-  const timeline = gsap.timeline({delay: 1});
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
 
   useEffect(() => {
+    // Throttled scroll handler to improve performance
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      if (currentScrollPos > 400) setIsVisible(true);
-      else setIsVisible(false);
+      
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          if (currentScrollPos > 50) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+          lastScrollY.current = currentScrollPos;
+          ticking.current = false;
+        });
+        
+        ticking.current = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    console.log(isVisible);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -25,13 +37,27 @@ const Navbar = () => {
   }, []);
 
   useGSAP(() => {
-    gsap.to('#navbar', {y: 0, duration: 1})
+    if (isVisible) {
+      gsap.to('#navbar', {
+        y: 0,
+        duration: 0.4,
+        ease: 'power2.out',
+        opacity: 1
+      });
+    } else {
+      gsap.to('#navbar', {
+        y: -10,
+        duration: 0.4,
+        ease: 'power2.out',
+        opacity: 0.95
+      });
+    }
   }, [isVisible]);
 
   return (
-    <header id="navbar" className={`w-full py-5 sm:px-10 px-5 flex justify-between items-center z-50 bg-black/75 backdrop-blur-xl absolut ${isVisible ? 'navbar-scroll border-b border-b-gray-300' : '-top-5'}`}>
+    <header id="navbar" className={`w-full h-[70px] sm:px-10 px-5 flex justify-between items-center z-50 fixed top-0 left-0 right-0 transition-colors duration-300 ${isVisible ? 'bg-black/75 backdrop-blur-xl border-b border-b-gray-300' : 'bg-black/90'}`}>
       <nav className='flex w-full screen-max-width justify-between'>
-        <img src={appleImg} alt="Apple" width={14} height={18} />
+        <img src={appleImg} alt="Apple" width={25} height={18} />
 
         <div className='md:flex flex-1 justify-center hidden'>
           {navLists.map((nav, i) => (

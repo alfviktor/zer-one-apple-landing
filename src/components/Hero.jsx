@@ -37,9 +37,9 @@ const Hero = () => {
   },[]);
 
   return (
-    <section className='w-full bg-black relative py-16'>
+    <section className='w-full bg-black relative pt-28 pb-16'>
         <div className="h-5/6 w-full flex-center flex-col">
-            <p className='hero-title translate-y-10'>iPhone 15 pro</p>
+            <p className='hero-title translate-y-10'>Work that matters</p>
             <div className='md:w-10/12 w-9/12'>
               <video className='pointer-events-none' autoPlay muted playsInline={true} key={videoSrc}>
                 <source src={videoSrc} type='video/mp4'/>
@@ -48,8 +48,8 @@ const Hero = () => {
         </div>
 
         <div id="cta" className="flex flex-col items-center opacity-0 translate-y-20 m-5">
-          <a href="#highlights" className='btn'>Buy</a>
-          <p>From $199/month or $999</p>
+          <a href="https://x.com/01dotinc" className='btn'>Join</a>
+          <p>Everything else is just busy work.</p>
         </div>
     </section>
   )
